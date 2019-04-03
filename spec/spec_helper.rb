@@ -1,3 +1,4 @@
+ENV['RACK_ENV'] ||= 'test'
 ENV["SINATRA_ENV"] = "test"
 require_relative '../environment'
 require 'rack/test'
@@ -14,3 +15,4 @@ def app
 end
 
 Capybara.app = app
+
